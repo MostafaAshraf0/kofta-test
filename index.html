@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/kofta.html -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kofta</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: rgb(37, 37, 37);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+      }
+      .container {
+        width: 1200px;
+        margin-inline: auto;
+        background-color: antiquewhite;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        height: 50vh;
+      }
+      ol {
+        margin-block: 15px;
+      }
+      .header {
+        background-color: rgb(233, 223, 210);
+      }
+      .card {
+        display: none;
+        margin-inline: auto;
+        transition: 300ms;
+        width: 80%;
+      }
+      .active {
+        display: block;
+      }
+      .l {
+        left: 15px;
+      }
+      .r {
+        right: 15px;
+      }
+      .nav {
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        padding: 15px;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .dots {
+        width: fit-content;
+        margin-inline: auto;
+      }
+      .activeDot {
+        scale: 1.5;
+      }
+    </style>
+  </head>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides((slideIndex += n));
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("card");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        // slides[i].style.opacity = "0";
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" activeDot", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " activeDot";
+    }
+  </script>
+  <body style="isolation: isolate">
+    <div class="header">
+      <h1>Kofta recipe</h1>
+      <button href="/salata.html" style="width: 10px; height: 20px; background-color: aqua;">
+      <a href="/salata.html"></a>
+    </button>
+    </div>
+    
+    <div class="container">
+      <div class="nav r" onclick="plusSlides(1)">
+        <i class="fa-solid fa-chevron-right right"></i>
+      </div>
+      <div class="nav l" onclick="plusSlides(-1)">
+        <i class="fa-solid fa-chevron-left left"></i>
+      </div>
+
+      <div class="card active">
+        <h4>Boharat al kofta</h4>
+        <br />
+        <ol>
+          <li>tuz</li>
+          <li>kosbara nashfa</li>
+          <li>kamoun</li>
+          <li>felfel eswed</li>
+          <li>7aba mn galeta unu</li>
+          <li>nut meg</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h4>5odar ll kofta</h4>
+        <ol>
+          <li>domates</li>
+          <li>felfel a5dar 1</li>
+          <li>soğan 1</li>
+          <li>tom</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h4>El Salata</h4>
+        <ol>
+          <li>chery domates</li>
+          <li>felfel 7ra2 2</li>
+          <li>gazar one is good</li>
+          <li>basal not a big one</li>
+          <li>ba2dones</li>
+          <li>5yar</li>
+          <li>limon</li>
+          <li>5al abyad</li>
+          <li>tom</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h4>Boharat al salata</h4>
+        <ol>
+          <li>tom</li>
+          <li>kosbara nashfa</li>
+          <li>kamoun</li>
+          <li>felfel eswed</li>
+          <li>tuz</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>rakez hna 3shan de step mohama</h3>
+        <p>
+          ht7ot al 5odar bta3 al kofta as minationed up there fe al kaba msh
+          <u>5alat</u> + al baharat htdrabhom 3ala 5afef kda msh 3ayzhom n3men
+          awe b3d kda hta5od al mix dah tsafeh awe t3soro al mohem tnazel al
+          maya al fen b3d kda t7ot al galeta unu dont put much or it will be
+          shebsheb b3d kda
+        </p>
+      </div>
+      <div class="card">
+        <h4>el t7ina sos</h4>
+        <ol>
+          <li>t7ena (msh m7taga 7aga y3ni )</li>
+          <li>
+            nafs boharat al salata bs 3ala al hady 3ayz ta3m al t7na ykon hwa al
+            bayen
+          </li>
+        </ol>
+      </div>
+      <div class="card">
+        <h4>el 3ashe</h4>
+        <p>
+          dea2a2 you need like 70% water(you can add zbady m3la2ten maslan lw
+          3andk ) , mal7 m3la2 tareban , sokar m3la2 kbera , zayet 10g ,5amera
+          something around 5 gr
+        </p>
+        <p>
+          ht3gen we tsebo yraya7 we b3d kda tk3warha tany we tsbha aktar mn sa3a
+          b3d kda ta2smha (tk3warha like ballz) zay mnta 3ayez we tsbha traya7
+          tany we b3d kda tfrda we tsbha traya7 10 abl ma td5lha al forn al forn
+          3ala max fel nos awel ma ttla3o htrosh 3leh maya msh kter bedak kda
+          zay ma shoft for more info you have my bank acc
+        </p>
+      </div>
+      <div class="card">
+        <h1>like &amp; subscribe for more</h1>
+      </div>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+      </div>
+    </div>
+  </body>
+</html>
